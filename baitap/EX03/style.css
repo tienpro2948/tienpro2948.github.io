@@ -1,6 +1,6 @@
 body {
+  background-color: #FFFFCC;
   font-family: Arial, sans-serif;
-  background-color: #ffffcc;
   color: #000;
   margin: 0;
   padding: 0;
@@ -10,9 +10,8 @@ body {
   width: 80%;
   margin: 20px auto;
   padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  background-color: #FFFFFF;
+  border: 1px solid #000;
 }
 
 h1 {
