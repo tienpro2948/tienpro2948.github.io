@@ -1,0 +1,21 @@
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Khoảng cách giữa logo và văn bản */
+  margin-bottom: 20px; /* Khoảng cách dưới cùng */
+}
+
+.intro-section img {
+  width: 100px; /* Điều chỉnh kích thước logo theo nhu cầu */
+  height: auto;
+}
+
+.intro-text h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.intro-text p {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+}
