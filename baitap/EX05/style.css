@@ -11,14 +11,14 @@
       right: 10px;
       top: 10px;
       display: flex;
-      gap: 20px; /* Khoảng cách giữa các mục */
+      gap: 20px; /* Khoảng cách giữa các nhóm mục */
     }
 
     nav ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
-      display: flex; /* Hiển thị các mục theo hàng ngang */
+      display: flex;
       flex-direction: row;
     }
 
@@ -42,8 +42,8 @@
       background-color: #ff7f00;
     }
 
-    /* Thụt vào các mục từ thứ 4 trở đi */
-    nav ul li:nth-child(n+4) a {
+    /* Các mục từ mục thứ 4 trở đi (lùi vào bên phải) */
+    nav ul li:nth-child(n+4) {
       margin-left: 15px;
     }
 
@@ -51,10 +51,10 @@
     nav ul li a:hover,
     nav ul li.active a {
       background-color: #ff7f00; /* Màu cam khi hover hoặc active */
-      color: white; /* Chữ trắng khi active */
+      color: white;
     }
 
-    /* Toàn bộ nền trang để dễ nhìn */
+    /* Nền toàn trang để dễ quan sát */
     body {
       background-color: #222;
       font-family: sans-serif;
