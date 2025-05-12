@@ -1,71 +1,36 @@
-/* Reset mặc định */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Thiết lập font và nền cho toàn bộ trang */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  line-height: 1.6;
+  background-color: #ffffcc;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
-/* Container chính */
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Header */
-header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 20px 0;
+h1 {
+  color: red;
   text-align: center;
 }
 
-/* Navigation */
-nav {
-  background-color: #333;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 14px 20px;
-  display: block;
-}
-
-nav ul li a:hover {
-  background-color: #575757;
-  border-radius: 4px;
-}
-
-/* Main content */
-main {
-  padding: 20px 0;
-}
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: white;
+h2 {
+  color: blue;
   text-align: center;
-  padding: 10px 0;
+}
+
+h3 {
+  color: green;
   margin-top: 20px;
+}
+
+p {
+  text-align: justify;
+  margin: 5px 0 15px 0;
 }
