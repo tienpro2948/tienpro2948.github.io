@@ -12,23 +12,26 @@ header {
   background-color: #2f3e46;
   color: white;
   padding: 20px;
-  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
+/* Tiêu đề bên trái */
 header h1 {
   margin: 0;
 }
 
-/* Menu điều hướng hàng ngang bên phải */
+/* Menu điều hướng nằm bên phải */
+nav {
+  margin-left: auto; /* Đẩy nav sang phải */
+}
+
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 30px; /* khoảng cách giữa các mục */
+  gap: 30px; /* Khoảng cách giữa các mục */
 }
 
 nav ul li {
