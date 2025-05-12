@@ -1,34 +1,144 @@
-/* Phần navigation */
+/* Toàn bộ trang */
+body {
+  background-color: #fdf9f4;
+  font-family: Arial, sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* Phần header */
+header {
+  background-color: #2f3e46;
+  color: white;
+  padding: 20px;
+  position: relative; /* Quan trọng để vị trí tuyệt đối của menu hoạt động */
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Menu điều hướng ở góc dưới bên phải header */
 nav {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  display: flex;
-  gap: 20px; /* Khoảng cách giữa các mục */
+  bottom: 10px;  /* Đặt sát mép dưới header */
+  right: 20px;   /* Đặt sát mép phải */
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
   margin: 0;
-  display: flex; /* Hiển thị các mục theo hàng ngang */
-  flex-direction: row;
+  padding: 0;
+  display: flex;
+  gap: 30px; /* Khoảng cách giữa các mục */
 }
 
 nav ul li {
-  margin-right: 20px;
+  display: inline;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  padding: 10px;
-  display: block;
+  padding: 8px 12px;
   border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-nav ul li a:hover, nav ul li.active a {
-  background-color: #ff7f00; /* Màu cam khi hover hoặc active */
-  color: white; /* Chữ trắng khi active */
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #ff7f00;
+  color: white;
+}
+
+/* Phần nội dung chính */
+main {
+  padding: 20px;
+  border-top: 3px solid red;
+}
+
+main h2 {
+  color: black;
+}
+
+/* Input form */
+input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Phần giới thiệu có logo và chữ */
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+}
+
+.intro-section img {
+  width: 100px;
+  height: auto;
+  margin-left: -20px;
+}
+
+.intro-text h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.intro-text p {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: #ff7f00;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Footer dạng div */
+#footer-bar {
+  background-color: #ff7f00;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+#footer-bar p {
+  margin: 0;
+}
+
+#footer-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+#footer-bar a:hover {
+  text-decoration: underline;
 }
