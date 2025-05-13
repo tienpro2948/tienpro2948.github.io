@@ -70,26 +70,7 @@ nav .active {
 #showcase {
     position: relative;
     min-height: 400px;
-    background-image: url('anh.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 1;
-    overflow: hidden;
-}
-
-#showcase {
-    position: relative;
-    min-height: 400px;
-    background-image: url('./anh.jpg'); /* Quan trọng */
+    background-image: url('./anh.jpg'); /* Đảm bảo đúng đường dẫn */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -110,7 +91,7 @@ nav .active {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4); /* overlay làm ảnh tối đi nhẹ */
     z-index: 0;
 }
 
@@ -118,7 +99,7 @@ nav .active {
 #showcase p {
     position: relative;
     z-index: 1;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* tạo độ nổi bật cho chữ */
 }
 
 /* Footer */
