@@ -68,28 +68,49 @@ nav .active {
 }
 
 #showcase {
-    position: relative; /* Cho phép chèn lớp overlay nếu cần */
-    min-height: 300px;
+    position: relative;
+    min-height: 400px;
     background-image: url('anh.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: #fff;
     text-align: center;
-    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1;
+    overflow: hidden;
 }
 
-/* Nếu bạn muốn đảm bảo chữ dễ đọc trên ảnh */
 #showcase::after {
     content: "";
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* lớp phủ làm tối ảnh nhẹ */
-    z-index: -1; /* nằm dưới nội dung */
+    background-color: rgba(0, 0, 0, 0.4); /* Lớp mờ tối */
+    z-index: 0;
+}
+
+/* Đảm bảo tiêu đề nằm trên lớp mờ */
+#showcase h1,
+#showcase p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    margin: 0 0 10px;
+}
+
+#showcase h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#showcase p {
+    font-size: 1.3rem;
 }
 
 /* Footer */
