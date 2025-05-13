@@ -1,6 +1,7 @@
+/* Base styles */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -8,69 +9,65 @@ body {
 }
 
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: auto;
-    overflow: hidden;
+    padding: 0 20px;
 }
 
+/* Reset list */
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* Header **/
+/* Header */
 header {
-    background: #35424a;
-    color: #fff;
+    background-color: #1f2937;
+    color: #ffffff;
     padding: 20px 0;
-    border-bottom: #e8491d 4px solid;
+    border-bottom: 4px solid #e8491d;
 }
 
-header a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: background 0.3s;
-    border-radius: 4px;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-header li {
-    display: inline;
-    margin-left: 20px;
-}
-
-header #branding {
-    float: left;
-}
-
-header #branding h1 {
-    font-size: 2.5rem;
+header h1 {
+    font-size: 2rem;
     margin: 0;
 }
 
-header nav {
-    float: right;
-    margin-top: 30px;
+nav ul {
+    display: flex;
+    gap: 20px;
 }
 
-header .highlight,
-header .current a {
-    color: #e8491d;
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
 }
 
-header a:hover {
-    background: #e8491d;
+nav a:hover,
+nav .active {
+    background-color: #e8491d;
     color: #fff;
 }
 
+/* Footer */
 footer {
-    background: #35424a;
-    color: #fff;
+    background-color: #1f2937;
+    color: #ffffff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
-    border-top: #e8491d 4px solid;
-    font-size: 1rem;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 4px solid #e8491d;
+    font-size: 0.95rem;
 }
