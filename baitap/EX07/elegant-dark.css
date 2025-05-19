@@ -1,5 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 
+/* Highlight Box – dùng để làm nổi bật nội dung */
+.highlight-box {
+    background-color: #1f2937; /* nền sáng hơn nền chính */
+    border: 2px solid #a78bfa; /* viền tím nổi bật */
+    border-radius: 12px;
+    padding: 24px;
+    margin: 40px 0;
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.highlight-box:hover {
+    transform: translateY(-4px);
+}
+
+.highlight-box p {
+    color: #f1f5f9;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.highlight-box strong {
+    color: #a78bfa;
+    font-weight: bold;
+}
+
+/* Tuỳ chọn cho khu vực liên hệ */
+.contact-box {
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.contact-box .contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #a78bfa;
+    color: #0f172a;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 12px;
+    transition: background 0.3s ease;
+}
+
+.contact-box .contact-btn:hover {
+    background-color: #c4b5fd;
+}
+
 /* Base Reset & Theme */
 body {
     font-family: 'Manrope', sans-serif;
@@ -67,58 +120,39 @@ nav .active {
     box-shadow: 0 0 10px #a78bfa88;
 }
 
-/* Highlight Box – dùng cho các phần nội dung quan trọng */
-.highlight-box {
-    background-color: #1e293b;
-    border: 2px solid #a78bfa;
-    border-radius: 12px;
-    padding: 30px;
-    margin: 40px 0;
-    box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.highlight-box:hover {
-    transform: translateY(-4px);
-}
-
-.highlight-box p {
-    font-size: 1.1rem;
-    color: #f1f5f9;
-    margin-bottom: 16px;
-    line-height: 1.7;
-}
-
-.highlight-box strong {
-    color: #a78bfa;
-    font-weight: 700;
-}
-
-/* Contact box style (bên trong highlight-box) */
-.contact-box {
+#showcase {
+    position: relative;
+    min-height: 400px;
+    background-image: url('./anh.jpg'); /* Đảm bảo đúng đường dẫn */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1;
+    overflow: hidden;
 }
 
-.contact-box h2 {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 16px;
+#showcase::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* overlay làm ảnh tối đi nhẹ */
+    z-index: 0;
 }
 
-.contact-box .contact-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #a78bfa;
-    color: #0f172a;
-    font-weight: 700;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-}
-
-.contact-box .contact-btn:hover {
-    background-color: #c4b5fd;
+#showcase h1,
+#showcase p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* tạo độ nổi bật cho chữ */
 }
 
 /* Footer */
