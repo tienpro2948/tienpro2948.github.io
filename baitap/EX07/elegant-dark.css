@@ -67,6 +67,60 @@ nav .active {
     box-shadow: 0 0 10px #a78bfa88;
 }
 
+/* Highlight Box – dùng cho các phần nội dung quan trọng */
+.highlight-box {
+    background-color: #1e293b;
+    border: 2px solid #a78bfa;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.highlight-box:hover {
+    transform: translateY(-4px);
+}
+
+.highlight-box p {
+    font-size: 1.1rem;
+    color: #f1f5f9;
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.highlight-box strong {
+    color: #a78bfa;
+    font-weight: 700;
+}
+
+/* Contact box style (bên trong highlight-box) */
+.contact-box {
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.contact-box .contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #a78bfa;
+    color: #0f172a;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.contact-box .contact-btn:hover {
+    background-color: #c4b5fd;
+}
+
 /* Footer */
 footer {
     background: #161b22;
