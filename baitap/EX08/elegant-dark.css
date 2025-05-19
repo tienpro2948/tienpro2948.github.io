@@ -47,6 +47,7 @@
     text-decoration: none;
     margin-top: 12px;
     transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .contact-box .contact-btn:hover {
@@ -111,6 +112,7 @@ nav a {
     padding: 10px 18px;
     border-radius: 10px;
     transition: background 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 nav a:hover,
@@ -120,6 +122,7 @@ nav .active {
     box-shadow: 0 0 10px #a78bfa88;
 }
 
+/* Showcase */
 #showcase {
     position: relative;
     min-height: 400px;
@@ -153,6 +156,45 @@ nav .active {
     position: relative;
     z-index: 1;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* tạo độ nổi bật cho chữ */
+}
+
+/* Feature Section – 3 logo + nội dung */
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.feature-item {
+    flex: 1 1 30%;
+    background-color: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item img {
+    max-width: 80px;
+    margin-bottom: 16px;
+}
+
+.feature-item h3 {
+    color: #a78bfa;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #e5e7eb;
+    font-size: 1rem;
 }
 
 /* Footer */
