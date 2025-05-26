@@ -1,60 +1,17 @@
-
 <!DOCTYPE html>
-<html>
-   <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width">
-     <meta name="description" content="Thiet ke web chuyen nghiep">
-     <meta name="keywords" content="web design, professional web design, thiet ke web, thiet ke web chuyen nghiep">
-     <meta name="author" content="Nhat Tien">
-     <title>Nhat Tien Web Design | Dịch vụ</title>
-     <link rel="stylesheet" href="elegant-dark.css">
-     <style>
-       /* Làm nổi bật phần liên hệ - phù hợp nền tối */
-       aside#sidebar .dark {
-         background-color: #2b2b2b;
-         border-left: 4px solid #00bcd4;
-         padding: 20px;
-         border-radius: 6px;
-         box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
-       }
-
-       aside#sidebar .dark h3 {
-         color: #00bcd4;
-         margin-bottom: 15px;
-       }
-
-       aside#sidebar .dark input[type="text"],
-       aside#sidebar .dark input[type="email"],
-       aside#sidebar .dark textarea {
-         width: 100%;
-         padding: 10px;
-         margin-bottom: 12px;
-         background-color: #1e1e1e;
-         border: 1px solid #444;
-         color: #eee;
-         border-radius: 4px;
-         font-size: 14px;
-       }
-
-       aside#sidebar .dark button.button_1 {
-         background-color: #00bcd4;
-         color: #fff;
-         border: none;
-         padding: 10px 16px;
-         font-size: 15px;
-         border-radius: 4px;
-         cursor: pointer;
-         transition: background-color 0.3s;
-       }
-
-       aside#sidebar .dark button.button_1:hover {
-         background-color: #0097a7;
-       }
-     </style>
-   </head>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Thiet ke web chuyen nghiep">
+    <meta name="keywords" content="web design, professional web design, thiet ke web, thiet ke web chuyen nghiep">
+    <meta name="author" content="Nhat Tien">
+    <title>Nhat Tien Web Design | Dịch vụ</title>
+    <link rel="stylesheet" href="elegant-dark.css">
+  </head>
   <body>
-   <header>
+    <!-- Header -->
+    <header>
       <div class="container">
         <div id="branding">
           <h1><span class="highlight">Nhat Tien</span> Web Design</h1>
@@ -69,55 +26,40 @@
       </div>
     </header>
 
-    <section id="main">
-      <div class="container">
-        <article id="main-col">
-          <h1 class="page-title">Các dịch vụ</h1>
-          <ul id="services">
-            <li>
-              <h3>Thiết kế Website</h3>
-              <p>Tạo website chuyên nghiệp, giá cả phải chăng cho cá nhân, công ty, doanh nghiệp hoặc tổ chức.</p>
-              <p>Giá: $1,000 - $3,000</p>
-            </li>
-            <li>
-              <h3>Bảo trì Website</h3>
-              <p>Bảo trì website chuyên nghiệp, giá cả phải chăng cho cá nhân, công ty, doanh nghiệp hoặc tổ chức.</p>
-              <p>Giá: $250 mỗi tháng</p>
-            </li>
-            <li>
-              <h3>Web Hosting</h3>
-              <p>Cung cấp hosting chuyên nghiệp, giá cả phải chăng cho cá nhân, công ty, doanh nghiệp hoặc tổ chức.</p>
-              <p>Giá: $25 mỗi tháng</p>
-            </li>
-          </ul>
-        </article>
+    <!-- Nội dung chính -->
+    <section class="container">
+      <h1 class="page-title">Các dịch vụ nổi bật</h1>
+      <p>Chúng tôi cung cấp các gói dịch vụ chất lượng cao phù hợp với mọi nhu cầu từ cá nhân đến doanh nghiệp.</p>
+    </section>
 
-        <aside id="sidebar">
-          <div class="dark">
-            <h3>Liên hệ</h3>
-            <form class="quote">
-              <div>
-                <label>Tên</label><br>
-                <input type="text" placeholder="Tên">
-              </div>
-              <div>
-                <label>Email</label><br>
-                <input type="email" placeholder="Email">
-              </div>
-              <div>
-                <label>Nội dung</label><br>
-                <textarea placeholder="Nội dung"></textarea>
-              </div>
-              <button class="button_1" type="submit">Gửi</button>
-            </form>
-          </div>
-        </aside>
+    <!-- Danh sách dịch vụ dạng lưới -->
+    <section class="highlight-box container">
+      <div class="service-item">
+        <h3>🌐 Thiết kế Website</h3>
+        <p>Website chuyên nghiệp cho cá nhân, công ty, tổ chức. Giao diện hiện đại, chuẩn SEO, bảo mật cao.</p>
+        <p><strong>Giá:</strong> $1,000 - $3,000</p>
+      </div>
+      <div class="service-item">
+        <h3>🔧 Bảo trì Website</h3>
+        <p>Dịch vụ bảo trì định kỳ, đảm bảo website luôn hoạt động ổn định, nhanh chóng và an toàn.</p>
+        <p><strong>Giá:</strong> $250 mỗi tháng</p>
+      </div>
+      <div class="service-item">
+        <h3>💾 Web Hosting</h3>
+        <p>Lưu trữ website tốc độ cao, uptime 99.9%, hỗ trợ kỹ thuật 24/7 và cấu hình linh hoạt theo nhu cầu.</p>
+        <p><strong>Giá:</strong> $25 mỗi tháng</p>
       </div>
     </section>
 
+    <!-- Form liên hệ -->
+    <section class="container contact-box">
+      <h2>Liên hệ nhận tư vấn dịch vụ</h2>
+      <a href="mailto:contact@nhattienweb.com" class="contact-btn">Gửi Email</a>
+    </section>
+
+    <!-- Footer -->
     <footer>
       <p>Nhat Tien Web Design, Copyright &copy; 2022</p>
     </footer>
   </body>
 </html>
-
