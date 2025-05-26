@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 
-/* Highlight Box – dùng để làm nổi bật nội dung */
+/* Thông tin & Dịch vụ – bố cục mới dạng lưới */
 .highlight-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
     background-color: #1f2937;
     border: 2px solid #a78bfa;
     border-radius: 12px;
-    padding: 24px;
+    padding: 40px;
     margin: 40px 0;
     box-shadow: 0 0 12px rgba(167, 139, 250, 0.25);
     transition: transform 0.3s ease;
@@ -17,13 +20,32 @@
 
 .highlight-box p {
     color: #f1f5f9;
-    margin-bottom: 12px;
-    font-size: 1.05rem;
+    font-size: 1rem;
+    margin-top: 8px;
 }
 
 .highlight-box strong {
     color: #a78bfa;
     font-weight: bold;
+}
+
+.highlight-box .service-item {
+    background-color: #111827;
+    padding: 24px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(167, 139, 250, 0.15);
+}
+
+.highlight-box .service-item:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-box .service-item h3 {
+    color: #a78bfa;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 /* Tuỳ chọn cho khu vực liên hệ */
