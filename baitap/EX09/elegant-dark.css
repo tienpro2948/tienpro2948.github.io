@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+/* Highlight Box – dùng để làm nổi bật nội dung */
+.highlight-box {
+    background-color: #1f2937;
+    border: 2px solid #a78bfa;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 40px 0;
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.highlight-box:hover {
+    transform: translateY(-4px);
+}
+
+.highlight-box p {
+    color: #f1f5f9;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.highlight-box strong {
+    color: #a78bfa;
+    font-weight: bold;
+}
+
+/* Tuỳ chọn cho khu vực liên hệ */
+.contact-box {
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.contact-box .contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #a78bfa;
+    color: #0f172a;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 12px;
+    transition: background 0.3s ease;
+}
+
+.contact-box .contact-btn:hover {
+    background-color: #c4b5fd;
+}
+
+/* Base Reset & Theme */
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #0d1117;
+    color: #e5e7eb;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background: #161b22;
+    padding: 30px 0;
+    border-bottom: 2px solid #a78bfa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#branding h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover,
+nav .active {
+    background: #a78bfa;
+    color: #0f172a;
+    box-shadow: 0 0 10px #a78bfa88;
+}
+
+/* Showcase */
+#showcase {
+    position: relative;
+    min-height: 400px;
+    background-image: url('./anh.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    overflow: hidden;
+}
+
+#showcase::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+#showcase h1,
+#showcase p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+footer {
+    background: #161b22;
+    color: #94a3b8;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 2px solid #a78bfa;
+    font-size: 1rem;
+}
+
+/* ===== THÊM MỚI: Tech Items Xếp Hàng Ngang ===== */
+.tech-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.tech-item {
+    flex: 1 1 30%;
+    background-color: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+.tech-item img {
+    max-width: 100px;
+    margin-bottom: 16px;
+}
+
+.tech-item h3 {
+    color: #a78bfa;
+    font-size: 1.2rem;
+}
