@@ -2,115 +2,59 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nguyễn Trần Nhật Tiến | Trader SMC</title>
-  <link rel="stylesheet" href="elegant-dark.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1117;
-      color: #e5e7eb;
-      margin: 0;
-    }
-
-    header {
-      background-color: #161b22;
-      padding: 30px 0;
-      text-align: center;
-      border-bottom: 2px solid #a78bfa;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.4rem;
-      color: #a78bfa;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #94a3b8;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    .about, .method, .contact {
-      background-color: #1f2937;
-      border-radius: 12px;
-      padding: 24px;
-      margin-bottom: 30px;
-      box-shadow: 0 0 12px rgba(167, 139, 250, 0.15);
-    }
-
-    .about h2, .method h2, .contact h2 {
-      color: #a78bfa;
-      margin-bottom: 12px;
-    }
-
-    .about p, .method p {
-      line-height: 1.6;
-    }
-
-    .method ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #161b22;
-      padding: 20px 0;
-      color: #94a3b8;
-      font-size: 0.95rem;
-      border-top: 2px solid #a78bfa;
-    }
-
-    .highlight {
-      color: #a78bfa;
-      font-weight: bold;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nguyễn Trần Nhật Tiến - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <nav>
+    <a href="#home">Giới thiệu</a>
+    <a href="#about">Học vấn</a>
+    <a href="#skills">Kỹ năng</a>
+  </nav>
 
-  <header>
+  <!-- Giới thiệu -->
+  <section id="home">
+    <img src="./avatar.png" alt="Avatar" class="avatar" />
     <h1>Nguyễn Trần Nhật Tiến</h1>
-    <p>Trader theo phương pháp <span class="highlight">Smart Money Concept (SMC)</span></p>
-  </header>
+    <p class="tagline">"Không chỉ code để chạy, tôi code để tạo dấu ấn."</p>
+    <div class="social">
+      <a href="mailto:tienprosieucap@gmail.com">📧 Email</a>
+      <a href="https://www.facebook.com/nguyen.tran.nhat.tien.2025" target="_blank" rel="noopener noreferrer">🌐 Facebook</a>
+    </div>
+  </section>
 
-  <main class="container">
-    <section class="about">
-      <h2>Giới thiệu</h2>
-      <p>
-        Mình là Tiến - một trader đam mê thị trường tài chính và chuyên phân tích theo phương pháp Smart Money Concept (SMC). Với sự kiên nhẫn, kỷ luật và phân tích hành vi dòng tiền lớn, mình hướng tới giao dịch hiệu quả và tối ưu rủi ro.
-      </p>
-    </section>
+  <!-- Học vấn -->
+  <section id="about">
+    <h2>📘 Quá trình học tập</h2>
+    <p>
+      Tôi là sinh viên ngành Công nghệ Thông tin, từng học ngôn ngữ C cơ bản, hiện đang phát triển kỹ năng chuyên sâu với Python. Bên cạnh đó, tôi đang học thêm HTML và CSS để hướng đến xây dựng các sản phẩm web chuyên nghiệp trong tương lai.
+    </p>
+  </section>
 
-    <section class="method">
-      <h2>Phương pháp giao dịch (SMC)</h2>
-      <p>
-        Smart Money Concept là phương pháp giao dịch dựa trên hành vi của các tổ chức lớn (banks, institutions) – hiểu và theo dòng tiền "thông minh".
-      </p>
-      <ul>
-        <li>Phân tích cấu trúc thị trường (market structure)</li>
-        <li>Xác định liquidity zone và order block</li>
-        <li>Entry theo confirmation với R:R tối ưu</li>
-        <li>Quản lý vốn chặt chẽ & kỷ luật</li>
-      </ul>
-    </section>
+  <!-- Kỹ năng -->
+  <section id="skills">
+    <h2>💡 Kỹ năng &amp; Công nghệ</h2>
+    <ul>
+      <li>🔥 Python – từ cơ bản đến ứng dụng automation</li>
+      <li>💻 HTML + CSS – tạo giao diện web chuẩn responsive</li>
+      <li>🧠 C cơ bản – nền tảng lập trình hệ thống</li>
+      <li>🚀 GitHub, VSCode, tư duy lập trình tốt</li>
+      <li>🎯 Tư duy logic – khả năng tự học, tìm hiểu nhanh</li>
+    </ul>
+  </section>
 
-    <section class="contact">
-      <h2>Liên hệ</h2>
-      <p>Email: <a href="mailto:tienprosieucap@gmail.com" class="highlight">tienprosieucap@gmail.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/tien02260" target="_blank" class="highlight">@tien02260</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Nguyễn Trần Nhật Tiến | All rights reserved.</p>
-  </footer>
-
+  <script>
+    document.addEventListener('click', (e) => {
+      const heart = document.createElement('div');
+      heart.textContent = '💖';
+      heart.className = 'heart';
+      heart.style.left = `${e.pageX}px`;
+      heart.style.top = `${e.pageY}px`;
+      heart.style.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 1000);
+    });
+  </script>
 </body>
 </html>
