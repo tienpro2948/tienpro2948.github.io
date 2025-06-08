@@ -7,31 +7,34 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f4f8;
+  background: #f9fafb;
   color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 /* Nav bar */
 nav {
   margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
 }
 
 nav .tab-btn {
   background: #e0e7ff;
   border: none;
-  padding: 12px 25px;
-  margin: 0 8px;
-  font-size: 16px;
+  padding: 12px 30px;
+  font-size: 17px;
   cursor: pointer;
-  border-radius: 25px;
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 30px;
   color: #444;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, color 0.3s;
+  user-select: none;
 }
 
 nav .tab-btn:hover {
@@ -42,72 +45,83 @@ nav .tab-btn:hover {
 nav .tab-btn.active {
   background: #6366f1;
   color: white;
-  box-shadow: 0 5px 12px rgba(99, 102, 241, 0.6);
+  box-shadow: 0 6px 15px rgba(99, 102, 241, 0.6);
 }
 
-/* Nội dung tab */
+/* Main content */
 main {
   width: 100%;
-  max-width: 700px;
+  max-width: 720px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 40px 50px;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Tab content - ẩn hiện với hiệu ứng mờ */
 .tab-content {
-  display: none;
-  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  right: 50px;
+  bottom: 40px;
+  overflow-y: auto;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 .tab-content.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  opacity: 1;
+  position: relative;
+  pointer-events: auto;
 }
 
 /* Avatar */
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 0 auto 15px auto;
-  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+  margin: 0 auto 18px;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45);
+  border: 3px solid #6366f1;
 }
 
-/* Tiêu đề */
-h1, h2 {
+/* Text */
+h1 {
   text-align: center;
-  margin-bottom: 20px;
   color: #4f46e5;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 2.3rem;
 }
 
 .tagline {
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: #6b7280;
 }
 
-/* Mạng xã hội */
+/* Social */
 .social {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-top: 15px;
+  gap: 28px;
+  margin-top: 8px;
 }
 
 .social a {
   text-decoration: none;
   color: #4f46e5;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   transition: color 0.3s;
 }
 
@@ -115,7 +129,35 @@ h1, h2 {
   color: #7c3aed;
 }
 
-/* Danh sách kỹ năng */
+/* Section headings */
+h2 {
+  color: #4338ca;
+  margin-bottom: 22px;
+  border-bottom: 3px solid #6366f1;
+  padding-bottom: 8px;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* Articles in about */
+article {
+  margin-bottom: 20px;
+}
+
+article h3 {
+  color: #3730a3;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+article p {
+  color: #4b5563;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* Skills list */
 ul {
   list-style: none;
   font-size: 1.1rem;
@@ -125,7 +167,20 @@ ul {
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 28px;
+  font-weight: 500;
+}
+
+ul li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #6366f1;
+  font-weight: 900;
+  font-size: 1.1rem;
+  top: 2px;
 }
 
 /* Hiệu ứng trái tim */
@@ -133,34 +188,5 @@ ul li {
   position: absolute;
   user-select: none;
   pointer-events: none;
-  font-size: 24px;
-  animation: floatUp 1s ease forwards;
-  z-index: 9999;
-}
-
-@keyframes floatUp {
-  0% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-50px) scale(1.5);
-  }
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  nav .tab-btn {
-    padding: 10px 15px;
-    margin: 0 5px;
-    font-size: 14px;
-  }
-  main {
-    padding: 20px;
-  }
-  .avatar {
-    width: 120px;
-    height: 120px;
-  }
-}
+  font-size: 26px;
+  animation: floatUp 1s ease
