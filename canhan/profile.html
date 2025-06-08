@@ -4,7 +4,216 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nguyễn Trần Nhật Tiến - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e3f2fd;
+      color: #0d47a1;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 15px;
+    }
+
+    nav button {
+      background: #1976d2;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background: #1565c0;
+    }
+
+    nav button.active {
+      background: #0d47a1;
+      font-weight: 600;
+      box-shadow: 0 0 10px #0d47a1aa;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Card style for each section's content */
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgb(13 71 161 / 0.15);
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      border: 2px solid #1976d2;
+      transition: border-color 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: #0d47a1;
+      box-shadow: 0 4px 12px rgb(13 71 161 / 0.3);
+    }
+
+    /* Giới thiệu */
+    .intro-main {
+      text-align: center;
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #1976d2;
+      margin-bottom: 15px;
+      object-fit: cover;
+      box-shadow: 0 0 12px #1976d2aa;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 1.15rem;
+      margin-top: 10px;
+      color: #0d47a1cc;
+    }
+
+    .intro-contact h3 {
+      margin-bottom: 10px;
+      color: #1565c0;
+      border-bottom: 2px solid #1976d2;
+      padding-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .intro-contact p {
+      font-size: 1rem;
+      margin: 8px 0;
+    }
+
+    .intro-contact a {
+      color: #1565c0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .intro-contact a:hover {
+      color: #0d47a1;
+      text-decoration: underline;
+    }
+
+    /* About section cards */
+    #about .card h3 {
+      color: #0d47a1;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      border-bottom: 2px solid #1976d2;
+      padding-bottom: 6px;
+    }
+
+    #about .card p {
+      font-size: 1.05rem;
+      color: #0d47a1cc;
+    }
+
+    /* Skills section: list of skill boxes */
+    #skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    #skills .card {
+      border-color: #64b5f6;
+      background: #e3f2fd;
+      color: #0d47a1;
+      box-shadow: 0 0 8px #1976d2aa;
+    }
+
+    #skills .card:hover {
+      border-color: #0d47a1;
+      background: #bbdefb;
+      box-shadow: 0 0 14px #0d47a1cc;
+    }
+
+    #skills .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #0d47a1;
+      border-bottom: 2px solid #1976d2;
+      padding-bottom: 6px;
+    }
+
+    #skills .card p {
+      font-size: 1rem;
+      color: #0d47a1cc;
+    }
+
+    /* Social links */
+    .social a {
+      margin: 0 10px;
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .social a:hover {
+      color: #0d47a1;
+      text-decoration: underline;
+    }
+
+    /* Heart effect */
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      pointer-events: none;
+      user-select: none;
+      animation: floatUp 1s forwards;
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1.5);
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -14,70 +223,91 @@
   </nav>
 
   <main>
-    <section id="home" class="tab-content active">
-      <img src="./avatar.png" alt="Avatar" class="avatar" />
-      <h1>Nguyễn Trần Nhật Tiến</h1>
-      <p class="tagline">"Không chỉ code để chạy, tôi code để tạo dấu ấn."</p>
-      <div class="social">
-        <a href="mailto:tienprosieucap@gmail.com">📧 Email</a>
-        <a href="https://www.facebook.com/nguyen.tran.nhat.tien.2025" target="_blank" rel="noopener noreferrer">🌐 Facebook</a>
+    <section class="tab-content active" id="home">
+      <div class="card intro-main">
+        <img src="./avatar.png" alt="Avatar" class="avatar" />
+        <h1>Nguyễn Trần Nhật Tiến</h1>
+        <p class="tagline">"Không chỉ code để chạy, tôi code để tạo dấu ấn."</p>
+      </div>
+
+      <div class="card intro-contact">
+        <h3>Liên hệ</h3>
+        <p>Email: <a href="mailto:tienprosieucap@gmail.com">tienprosieucap@gmail.com</a></p>
+        <p>Mạng xã hội: 
+          <a href="https://www.facebook.com/nguyen.tran.nhat.tien.2025" target="_blank" rel="noopener">Facebook</a>
+        </p>
       </div>
     </section>
 
-    <section id="about" class="tab-content">
-      <h2>📘 Quá trình học tập</h2>
-      <article>
-        <h3>Giai đoạn 1: Học lập trình C cơ bản</h3>
+    <section class="tab-content" id="about">
+      <div class="card">
+        <h3>Cơ bản về C</h3>
         <p>
-          Bắt đầu với ngôn ngữ C, tôi nắm vững các khái niệm cơ bản như biến, kiểu dữ liệu, vòng lặp, điều kiện và con trỏ. Việc học C giúp tôi hiểu sâu về cách máy tính vận hành và lập trình hệ thống.
+          Tôi bắt đầu học lập trình với ngôn ngữ C, tập trung vào các kiến thức cơ bản như biến, vòng lặp, hàm, mảng, con trỏ và cấu trúc dữ liệu đơn giản. Điều này giúp tôi xây dựng nền tảng vững chắc về lập trình hệ thống và tư duy logic lập trình.
         </p>
-      </article>
-      <article>
-        <h3>Giai đoạn 2: Phát triển kỹ năng Python</h3>
+      </div>
+
+      <div class="card">
+        <h3>Phát triển Python</h3>
         <p>
-          Hiện tại tôi tập trung phát triển kỹ năng Python, đặc biệt trong lĩnh vực tự động hóa và xử lý dữ liệu. Python giúp tôi làm việc nhanh chóng và hiệu quả hơn trong các dự án thực tế.
+          Hiện tại, tôi đang tập trung phát triển kỹ năng Python từ cơ bản đến nâng cao, bao gồm lập trình hướng đối tượng, xử lý dữ liệu, sử dụng thư viện phổ biến như Pandas, NumPy, và tự động hóa các tác vụ để nâng cao hiệu suất công việc.
         </p>
-      </article>
-      <article>
-        <h3>Giai đoạn 3: Học web cơ bản với HTML & CSS</h3>
+      </div>
+
+      <div class="card">
+        <h3>Web với HTML & CSS</h3>
         <p>
-          Để hướng đến phát triển web, tôi đang học và thực hành HTML, CSS để xây dựng các giao diện web chuẩn, thân thiện với người dùng và chuẩn responsive.
+          Bên cạnh đó, tôi học thêm HTML và CSS để xây dựng các trang web chuẩn responsive, có thể chạy mượt trên mọi thiết bị. Tôi cũng tìm hiểu các kỹ thuật cơ bản về bố cục, màu sắc và UX/UI để tạo ra giao diện web đẹp mắt và thân thiện với người dùng.
         </p>
-      </article>
-      <p><em>Mục tiêu của tôi là kết hợp các kỹ năng này để phát triển các sản phẩm công nghệ có tính ứng dụng cao.</em></p>
+      </div>
     </section>
 
-    <section id="skills" class="tab-content">
-      <h2>💡 Kỹ năng & Công nghệ</h2>
-      <ul>
-        <li>🔥 <strong>Python:</strong> Thành thạo từ căn bản đến automation thực tế.</li>
-        <li>💻 <strong>HTML + CSS:</strong> Thiết kế giao diện web responsive, hiện đại, tối ưu trải nghiệm người dùng.</li>
-        <li>🧠 <strong>C cơ bản:</strong> Nền tảng lập trình hệ thống, tư duy cấu trúc dữ liệu và thuật toán.</li>
-        <li>🚀 <strong>GitHub, VSCode:</strong> Công cụ phát triển và quản lý mã nguồn chuyên nghiệp.</li>
-        <li>🎯 <strong>Tư duy logic & tự học:</strong> Khả năng phân tích, tìm hiểu và áp dụng kiến thức mới nhanh chóng.</li>
-      </ul>
+    <section class="tab-content" id="skills">
+      <div class="card">
+        <h3>Python</h3>
+        <p>Thành thạo lập trình Python từ cơ bản đến nâng cao, bao gồm automation, xử lý dữ liệu, và xây dựng ứng dụng nhỏ.</p>
+      </div>
+
+      <div class="card">
+        <h3>HTML & CSS</h3>
+        <p>Tạo giao diện web chuẩn responsive, thân thiện với người dùng và tối ưu trên các thiết bị khác nhau.</p>
+      </div>
+
+      <div class="card">
+        <h3>C cơ bản</h3>
+        <p>Nắm chắc kiến thức lập trình hệ thống với C, hiểu sâu về biến, con trỏ, bộ nhớ và cấu trúc dữ liệu đơn giản.</p>
+      </div>
+
+      <div class="card">
+        <h3>Công cụ & Tư duy</h3>
+        <p>Sử dụng GitHub, VSCode hiệu quả và có tư duy lập trình logic tốt, biết cách tự học và giải quyết vấn đề.</p>
+      </div>
+
+      <div class="card">
+        <h3>Tư duy logic</h3>
+        <p>Khả năng phân tích, lập kế hoạch và giải quyết vấn đề một cách logic và hiệu quả, luôn chủ động tìm tòi học hỏi.</p>
+      </div>
     </section>
   </main>
 
   <script>
+    // Tab navigation
     const tabs = document.querySelectorAll('.tab-btn');
     const contents = document.querySelectorAll('.tab-content');
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        if(tab.classList.contains('active')) return;
-
-        // Xóa active cũ
-        document.querySelector('.tab-btn.active').classList.remove('active');
-        document.querySelector('.tab-content.active').classList.remove('active');
-
-        // Thêm active mới
+        tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
-        document.getElementById(tab.dataset.tab).classList.add('active');
+
+        const target = tab.dataset.tab;
+        contents.forEach(content => {
+          content.classList.toggle('active', content.id === target);
+        });
       });
     });
 
-    // Hiệu ứng trái tim khi click chuột
+    // Heart click effect
     document.addEventListener('click', e => {
       const heart = document.createElement('div');
       heart.textContent = '💖';
