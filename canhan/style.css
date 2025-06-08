@@ -1,1 +1,157 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Thanh điều hướng */
+nav {
+  background-color: #282c34;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #61dafb;
+}
+
+/* Các section */
+section {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+}
+
+/* Giới thiệu */
+#home {
+  text-align: center;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #61dafb;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.social a {
+  margin: 0 10px;
+  color: #282c34;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: #61dafb;
+}
+
+/* Tiêu đề section */
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #282c34;
+  border-bottom: 3px solid #61dafb;
+  padding-bottom: 5px;
+}
+
+/* Danh sách kỹ năng */
+ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
+li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+/* Hiệu ứng trái tim */
+.heart {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  font-size: 24px;
+  animation: floatUp 1s ease forwards;
+  transform: translate(-50%, -50%);
+  will-change: transform, opacity;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-50px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  section {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+}
 
