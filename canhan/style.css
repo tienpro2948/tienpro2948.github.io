@@ -72,6 +72,21 @@ main {
   overflow-y: auto;
   transition: opacity 0.4s ease;
   pointer-events: none;
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 #e0e7ff;
+}
+
+.tab-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tab-content::-webkit-scrollbar-thumb {
+  background-color: #6366f1;
+  border-radius: 4px;
+}
+
+.tab-content::-webkit-scrollbar-track {
+  background: #e0e7ff;
 }
 
 .tab-content.active {
@@ -80,8 +95,8 @@ main {
   pointer-events: auto;
 }
 
-/* Avatar */
-.avatar {
+/* Giới thiệu (home) */
+#home .avatar {
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -90,10 +105,14 @@ main {
   margin: 0 auto 18px;
   box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45);
   border: 3px solid #6366f1;
+  transition: transform 0.3s ease;
 }
 
-/* Text */
-h1 {
+#home .avatar:hover {
+  transform: scale(1.05);
+}
+
+#home h1 {
   text-align: center;
   color: #4f46e5;
   font-weight: 700;
@@ -101,23 +120,34 @@ h1 {
   font-size: 2.3rem;
 }
 
-.tagline {
+#home .tagline {
   font-style: italic;
   font-size: 1.15rem;
   text-align: center;
   margin-bottom: 20px;
   color: #6b7280;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Social */
-.social {
+/* Social phần */
+#home .social {
   display: flex;
   justify-content: center;
   gap: 28px;
   margin-top: 8px;
+  padding: 15px 30px;
+  border: 1.5px solid #6366f1;
+  border-radius: 40px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #eef0ff;
+  box-shadow: 0 3px 12px rgba(99, 102, 241, 0.25);
 }
 
-.social a {
+#home .social a {
   text-decoration: none;
   color: #4f46e5;
   font-weight: 600;
@@ -125,7 +155,7 @@ h1 {
   transition: color 0.3s;
 }
 
-.social a:hover {
+#home .social a:hover {
   color: #7c3aed;
 }
 
@@ -139,48 +169,79 @@ h2 {
   font-size: 1.8rem;
 }
 
-/* Articles in about */
-article {
+/* ABOUT - chia thành các card */
+#about article {
+  background: #f3f4ff;
+  border: 1.5px solid #6366f1;
+  border-radius: 16px;
+  padding: 20px 25px;
   margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.12);
+  transition: box-shadow 0.3s ease;
 }
 
-article h3 {
+#about article:hover {
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.3);
+}
+
+#about article h3 {
   color: #3730a3;
   font-weight: 600;
-  margin-bottom: 8px;
-  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
 }
 
-article p {
+#about article p {
   color: #4b5563;
-  line-height: 1.5;
-  font-size: 1rem;
-}
-
-/* Skills list */
-ul {
-  list-style: none;
-  font-size: 1.1rem;
   line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+#about em {
+  display: block;
+  margin-top: 25px;
+  font-style: italic;
+  color: #5b5f7e;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Skills list - style thành các box nhỏ */
+#skills ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-left: 0;
+}
+
+#skills ul li {
+  background: white;
+  padding: 15px 22px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(99, 102, 241, 0.15);
+  font-size: 1.15rem;
+  font-weight: 600;
   color: #374151;
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 14px;
   position: relative;
-  padding-left: 28px;
-  font-weight: 500;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  cursor: default;
 }
 
-ul li::before {
+#skills ul li:hover {
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+  transform: translateY(-4px);
+}
+
+#skills ul li::before {
   content: "▶";
   position: absolute;
-  left: 0;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   color: #6366f1;
   font-weight: 900;
-  font-size: 1.1rem;
-  top: 2px;
+  font-size: 1.3rem;
 }
 
 /* Hiệu ứng trái tim */
@@ -189,4 +250,42 @@ ul li::before {
   user-select: none;
   pointer-events: none;
   font-size: 26px;
-  animation: floatUp 1s ease
+  animation: floatUp 1s ease forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  main {
+    padding: 25px 20px;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav .tab-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  #home .tagline {
+    font-size: 1rem;
+  }
+  #about article h3 {
+    font-size: 1.1rem;
+  }
+  #skills ul li {
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+}
