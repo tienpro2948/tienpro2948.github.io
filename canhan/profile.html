@@ -8,13 +8,12 @@
 </head>
 <body>
   <nav>
-    <button class="tab-button active" data-tab="home">Giới thiệu</button>
-    <button class="tab-button" data-tab="about">Học vấn</button>
-    <button class="tab-button" data-tab="skills">Kỹ năng</button>
+    <button class="tab-btn active" data-tab="home">Giới thiệu</button>
+    <button class="tab-btn" data-tab="about">Học vấn</button>
+    <button class="tab-btn" data-tab="skills">Kỹ năng</button>
   </nav>
 
   <main>
-    <!-- Tab Nội dung -->
     <section id="home" class="tab-content active">
       <img src="./avatar.png" alt="Avatar" class="avatar" />
       <h1>Nguyễn Trần Nhật Tiến</h1>
@@ -28,46 +27,43 @@
     <section id="about" class="tab-content">
       <h2>📘 Quá trình học tập</h2>
       <p>
-        Tôi là sinh viên ngành Công nghệ Thông tin. Tôi đã bắt đầu học lập trình với ngôn ngữ C cơ bản, giúp tôi hiểu rõ về cấu trúc dữ liệu và cách làm việc của hệ thống máy tính.
+        Tôi là sinh viên ngành Công nghệ Thông tin, bắt đầu với ngôn ngữ lập trình C cơ bản. Hiện tại, tôi đang phát triển chuyên sâu Python để phục vụ cho automation và các dự án thực tế. Ngoài ra, tôi cũng học thêm HTML và CSS để xây dựng các sản phẩm web chuyên nghiệp, đáp ứng tiêu chuẩn responsive hiện đại.
       </p>
       <p>
-        Hiện tại tôi đang phát triển kỹ năng chuyên sâu với Python, sử dụng nó để viết các chương trình tự động hóa và phân tích dữ liệu.
-      </p>
-      <p>
-        Ngoài ra, tôi cũng đang học HTML và CSS để xây dựng các trang web đẹp mắt, chuẩn responsive, phục vụ cho việc tạo các sản phẩm web chuyên nghiệp trong tương lai.
+        Mục tiêu của tôi là kết hợp kiến thức lập trình nền tảng với kỹ năng thiết kế giao diện, từ đó tạo ra những ứng dụng web thân thiện, dễ sử dụng và hiệu quả.
       </p>
     </section>
 
     <section id="skills" class="tab-content">
-      <h2>💡 Kỹ năng &amp; Công nghệ</h2>
+      <h2>💡 Kỹ năng & Công nghệ</h2>
       <ul>
-        <li>🔥 Python – từ cơ bản đến ứng dụng automation</li>
-        <li>💻 HTML + CSS – tạo giao diện web chuẩn responsive</li>
-        <li>🧠 C cơ bản – nền tảng lập trình hệ thống</li>
-        <li>🚀 GitHub, VSCode, tư duy lập trình tốt</li>
-        <li>🎯 Tư duy logic – khả năng tự học, tìm hiểu nhanh</li>
+        <li>🔥 Python – thành thạo từ cơ bản đến ứng dụng automation thực tiễn.</li>
+        <li>💻 HTML + CSS – thiết kế giao diện web chuẩn responsive, thân thiện với người dùng.</li>
+        <li>🧠 C cơ bản – nền tảng lập trình hệ thống, giúp hiểu sâu về cấu trúc dữ liệu và thuật toán.</li>
+        <li>🚀 GitHub, VSCode – công cụ phát triển, quản lý mã nguồn hiệu quả.</li>
+        <li>🎯 Tư duy logic tốt – khả năng tự học và xử lý vấn đề nhanh chóng.</li>
       </ul>
     </section>
   </main>
 
   <script>
-    // Xử lý chuyển tab
-    const tabs = document.querySelectorAll('.tab-button');
+    // Tab navigation
+    const tabs = document.querySelectorAll('.tab-btn');
     const contents = document.querySelectorAll('.tab-content');
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        // Bỏ active trên tất cả tab và nội dung
+        // Bỏ active tất cả nút và nội dung
         tabs.forEach(t => t.classList.remove('active'));
         contents.forEach(c => c.classList.remove('active'));
 
-        // Thêm active cho tab bấm và nội dung tương ứng
+        // Active nút bấm và nội dung tương ứng
         tab.classList.add('active');
         document.getElementById(tab.dataset.tab).classList.add('active');
       });
     });
 
-    // Hiệu ứng trái tim khi click bất cứ đâu trên body
+    // Hiệu ứng trái tim khi click chuột
     document.addEventListener('click', e => {
       const heart = document.createElement('div');
       heart.textContent = '💖';
